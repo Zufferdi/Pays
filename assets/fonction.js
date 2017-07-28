@@ -36,24 +36,29 @@ var country = countries[countryID].adj;
 var reponse = countries[countryID].pop
 console.log(reponse)
 
-    $(".resultat").hide()    
+    $(".resultat").hide()  
+    
     $("#submit").on( 'click', function() {
         
         var difference = Math.abs($("#resultat").val() - reponse)
-console.log(difference)
+        console.log(difference)
 
             if (difference == reponse) {
                 var resultat = "excellent !";
-                return $(".resultat").text(resultat).show()
+                var note = 100;
             } 
             else if (difference < 100) {
                 var resultat = "presque bien joué !";
-                return $(".resultat").text(resultat).show()
+                var note = 50;
             } 
             else if (difference > 101) {
                 var resultat = "encore un effort, tu en es loin.";
-                return $(".resultat").text(resultat).show()
+                var note = 0;
+                            
             }
+            console.log(note)
+            return $(".resultat").text(resultat).show()  
+
         }
     )
 
