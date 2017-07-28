@@ -11,9 +11,17 @@
     
 }
 
-#submit{
-    
+
+ #submit { 
+    float: right; 
+    text-align: right; 
 }
+
+#next {
+    float: left; 
+
+}
+
 
 .resultat{
     
